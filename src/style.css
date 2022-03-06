@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image-container {
+  border: 1px solid black;
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  margin: 15px;
+}
+
+img {
+  width: 150px;
+  height: 200px;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container-male {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-female {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-text {
+  font-size: 1.2rem;
+  margin: 1rem;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.name-text {
+  font-weight: bold;
+  font-style: oblique;
+}

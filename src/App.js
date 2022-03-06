@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import SettingContext from "./SettingContext";
+import Female from "./components/Female";
+import Male from "./components/Male";
 
 function App() {
+  const [harryPotterData, setHarryPotterData] = useState([]);
+
+  const fetchHarryApi = (url) => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setHarryPotterData(data);
+      });
+  };
+
+  useEffect(() => {
+    fetchHarryApi("http://hp-api.herokuapp.com/api/characters");
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SettingContext.Provider value={{ harryPotterData }}>
+        <Female />
+        <Male />
+      </SettingContext.Provider>
     </div>
   );
 }
