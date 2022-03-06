@@ -3,6 +3,8 @@ import SettingContext from "./SettingContext";
 import Female from "./components/Female";
 import Male from "./components/Male";
 
+import "./style.css";
+
 function App() {
   const [harryPotterData, setHarryPotterData] = useState([]);
 

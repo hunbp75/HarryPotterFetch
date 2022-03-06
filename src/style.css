@@ -17,6 +17,8 @@
 img {
   width: 150px;
   height: 200px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .App {
@@ -44,6 +46,23 @@ img {
 }
 
 .name-text {
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.popup-container {
+  background-color: black;
+  color: beige;
+  padding: 20px;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+#popbtn {
+  background-color: rgb(214, 205, 205);
+  padding: 2px;
+  width: 100px;
+  border-radius: 10px;
   font-weight: bold;
   font-style: oblique;
 }

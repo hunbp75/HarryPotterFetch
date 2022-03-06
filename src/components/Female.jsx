@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import SettingContext from "../SettingContext";
-import "../style.css";
+
+import Popup from "reactjs-popup";
 
 const Female = () => {
   const contextHarryFemale = useContext(SettingContext);
@@ -17,7 +18,20 @@ const Female = () => {
           return (
             <div key={index} className="image-container">
               <p className="name-text">{item.name}</p>
-              <img src={item.image} alt=""></img>
+              <img src={item.image} alt=""></img>{" "}
+              <Popup
+                trigger={<button id="popbtn"> More info </button>}
+                position="right center"
+              >
+                <div className="popup-container">
+                  <p>Name: {item.name}</p>
+                  <p>Species: {item.species}</p>
+                  <p>Date of Birth: {item.dateOfBirth}</p>
+                  <p>Eye color: {item.eyeColour}</p>
+                  <p>Hair color: {item.hairColour}</p>
+                  <p>Actor: {item.actor}</p>
+                </div>
+              </Popup>
             </div>
           );
         return <></>;
